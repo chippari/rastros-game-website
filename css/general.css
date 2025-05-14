@@ -1,0 +1,35 @@
+/* 
+# Colors Palette:
+>> 
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+}
+
+/*===============================*/
+/* GENERAL REUSABLE COMPONENTS*/
+/*===============================*/
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
