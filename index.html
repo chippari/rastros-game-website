@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -108,9 +108,42 @@
       <section class="section-game"></section>
     </main>
     <footer class="footer">
-      <div class="suspects-container"></div>
-      <div class="locals-container"></div>
-      <div class="gun-containers"></div>
+      <div class="suspects-container">
+        <button
+          class="btn-open-suspects"
+          id="open-suspects-btn"
+          aria-label="open suspects"
+          aria-expanded="false"
+          aria-controls="suspects"
+        >
+          <ion-icon name="people-outline" class="icon-suspects"></ion-icon>
+          <h1 class="btn-title-suspects">Suspeitos</h1>
+        </button>
+      </div>
+      <div class="locals-container">
+        <button
+          class="btn-open-locals"
+          id="open-locals-btn"
+          aria-label="open locals"
+          aria-expanded="false"
+          aria-controls="locals"
+        >
+          <ion-icon name="location-outline" class="icon-locals"></ion-icon>
+          <h1 class="btn-title-locals">Locais</h1>
+        </button>
+      </div>
+      <div class="weapons-container">
+        <button
+          class="btn-open-weapons"
+          id="open-weapons-btn"
+          aria-label="open weapons"
+          aria-expanded="false"
+          aria-controls="weapons"
+        >
+          <ion-icon name="hammer-outline" class="icon-weapons"></ion-icon>
+          <h1 class="btn-title-weapons">Armas</h1>
+        </button>
+      </div>
     </footer>
   </body>
 </html>
