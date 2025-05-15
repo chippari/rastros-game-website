@@ -1,4 +1,10 @@
 /*===============================*/
+/* GENERAL CODE */
+/*===============================*/
+
+const overlay = document.getElementById('overlay');
+
+/*===============================*/
 /* BUTTONS NAVBAR CODE */
 /*===============================*/
 
@@ -20,9 +26,10 @@ function closeSidebar() {
 
 openBtn.addEventListener('click', openSidebar);
 closeBtn.addEventListener('click', closeSidebar);
+overlay.addEventListener('click', closeSidebar);
 
 /*===============================*/
-/* BUTTONS Hint CODE */
+/* BUTTONS HINT CODE */
 /*===============================*/
 
 const openHintBtn = document.getElementById('open-hint-btn');
@@ -43,3 +50,27 @@ function closeHint() {
 
 openHintBtn.addEventListener('click', openHint);
 closeHintBtn.addEventListener('click', closeHint);
+overlay.addEventListener('click', closeHint);
+
+/*===============================*/
+/* BUTTONS SUSPECTS CODE */
+/*===============================*/
+
+const openSuspectsBtn = document.getElementById('open-suspects-btn');
+const closeSuspectsBtn = document.getElementById('open-suspects-btn');
+const suspectsContainer = document.getElementById('suspects-container');
+
+function openSuspects() {
+  suspectsContainer.classList.add('show');
+  openSuspectsBtn.setAttribute('aria-expanded', 'true');
+  suspectsContainer.removeAttribute('inert');
+}
+
+function closeSuspects() {
+  suspectsContainer.classList.remove('show');
+  openSuspectsBtn.setAttribute('aria-expanded', 'false');
+  suspectsContainer.setAttribute('inert', '');
+}
+
+openSuspectsBtn.addEventListener('click', openSuspects);
+// closeSuspectsBtn.addEventListener('click', closeSuspects);

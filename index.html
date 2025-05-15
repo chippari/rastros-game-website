@@ -102,48 +102,54 @@
         </ul>
       </nav>
 
-      <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+      <div id="overlay" aria-hidden="true"></div>
     </header>
     <main>
       <section class="section-game"></section>
     </main>
     <footer class="footer">
-      <div class="suspects-container">
-        <button
-          class="btn-open-suspects"
-          id="open-suspects-btn"
-          aria-label="open suspects"
-          aria-expanded="false"
-          aria-controls="suspects"
-        >
-          <ion-icon name="people-outline" class="icon-suspects"></ion-icon>
-          <h1 class="btn-title-suspects">Suspeitos</h1>
-        </button>
-      </div>
-      <div class="locals-container">
-        <button
-          class="btn-open-locals"
-          id="open-locals-btn"
-          aria-label="open locals"
-          aria-expanded="false"
-          aria-controls="locals"
-        >
-          <ion-icon name="location-outline" class="icon-locals"></ion-icon>
-          <h1 class="btn-title-locals">Locais</h1>
-        </button>
-      </div>
-      <div class="weapons-container">
-        <button
-          class="btn-open-weapons"
-          id="open-weapons-btn"
-          aria-label="open weapons"
-          aria-expanded="false"
-          aria-controls="weapons"
-        >
-          <ion-icon name="hammer-outline" class="icon-weapons"></ion-icon>
-          <h1 class="btn-title-weapons">Armas</h1>
-        </button>
-      </div>
+      <button
+        class="btn-open-suspects"
+        id="open-suspects-btn"
+        aria-label="open suspects"
+        aria-expanded="false"
+        aria-controls="suspects"
+      >
+        <ion-icon name="people-outline" class="icon-suspects"></ion-icon>
+        <h1 class="btn-title-suspects">Suspeitos</h1>
+      </button>
+      <div class="suspects-container" id="suspects-container" inert></div>
+      <button
+        class="btn-close-suspects"
+        id="close-suspects-btn"
+        aria-label="close suspects"
+      >
+        <ion-icon name="close-outline" class="icon-close-suspects"></ion-icon>
+        <h1 class="btn-title-close-suspects">Fechar</h1>
+      </button>
+      <!--  -->
+      <button
+        class="btn-open-locals"
+        id="open-locals-btn"
+        aria-label="open locals"
+        aria-expanded="false"
+        aria-controls="locals"
+      >
+        <ion-icon name="location-outline" class="icon-locals"></ion-icon>
+        <h1 class="btn-title-locals">Locais</h1>
+      </button>
+      <!-- <div class="locals-container"></div> -->
+      <button
+        class="btn-open-weapons"
+        id="open-weapons-btn"
+        aria-label="open weapons"
+        aria-expanded="false"
+        aria-controls="weapons"
+      >
+        <ion-icon name="hammer-outline" class="icon-weapons"></ion-icon>
+        <h1 class="btn-title-weapons">Armas</h1>
+      </button>
+      <!-- <div class="weapons-container"></div> -->
     </footer>
   </body>
 </html>

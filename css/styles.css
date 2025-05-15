@@ -221,34 +221,16 @@
   position: relative;
 
   background-color: #182225;
-  border: 0.1rem solid #b5c7cf;
 }
 
 /*===============================*/
 /* FOOTER SUSPECTS */
 /*===============================*/
 
-.suspects-container {
+.btn-open-suspects {
   height: 7rem;
   width: calc(100% / 3);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-right: 0.1rem solid #b5c7cf;
-  padding: 0 4.8rem;
-}
-
-.suspects-container:hover,
-.suspects-container:active {
-  background-color: #253439;
-  border-top: 0.1rem solid #b5c7cf;
-  border-bottom: 0.1rem solid #b5c7cf;
-}
-
-.btn-open-suspects,
-.btn-close-suspects {
   background: none;
   border: none;
   padding: 0;
@@ -258,14 +240,49 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
 }
 
-.icon-suspects {
+.btn-close-suspects {
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+}
+
+.btn-open-suspects:hover,
+.btn-open-suspects:active,
+.btn-close-suspects:hover,
+.btn-close-suspects:active {
+  background-color: #253439;
+}
+
+.icon-suspects,
+.icon-close-suspects {
   font-size: 4rem;
   color: #b5c7cf;
 }
 
-.btn-title-suspects {
+.btn-title-suspects,
+.btn-title-close-suspects {
   font-size: 2.8rem;
   font-family: 'Ibarra Real Nova', serif;
   font-weight: 700;
@@ -274,25 +291,33 @@
   color: #b5c7cf;
 }
 
+.suspects-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(80rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.suspects-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.suspects-container.show ~ #overlay {
+  display: block;
+}
+
 /*===============================*/
 /* FOOTER LOCALS */
 /*===============================*/
-
-.locals-container {
-  height: 7rem;
-  width: calc(100% / 3);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.locals-container:hover,
-.locals-container:active {
-  background-color: #253439;
-  border-top: 0.1rem solid #b5c7cf;
-  border-bottom: 0.1rem solid #b5c7cf;
-}
 
 .btn-open-locals,
 .btn-close-locals {
@@ -305,6 +330,20 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background-color: #182225;
+  border-top: 0.1rem solid #b5c7cf;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  z-index: 100;
+}
+
+.btn-open-locals:hover,
+.btn-close-locals:active {
+  background-color: #253439;
 }
 
 .icon-locals {
@@ -321,31 +360,18 @@
   color: #b5c7cf;
 }
 
+/* .locals-container {
+} */
+
 /*===============================*/
 /* FOOTER WEAPONS */
 /*===============================*/
 
-.weapons-container {
+.btn-open-weapons,
+.btn-close-weapons {
   height: 7rem;
   width: calc(100% / 3);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-left: 0.1rem solid #b5c7cf;
-  padding: 0 4.8rem;
-}
-
-.weapons-container:hover,
-.weapons-container:active {
-  background-color: #253439;
-  border-top: 0.1rem solid #b5c7cf;
-  border-bottom: 0.1rem solid #b5c7cf;
-}
-
-.btn-open-weapons,
-.btn-close-weapons {
   background: none;
   border: none;
   padding: 0;
@@ -355,6 +381,17 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+}
+
+.btn-open-weapons:hover,
+.btn-close-weapons:active {
+  background-color: #253439;
 }
 
 .icon-weapons {
@@ -370,3 +407,6 @@
   text-transform: uppercase;
   color: #b5c7cf;
 }
+
+/* .weapons-container {
+} */
