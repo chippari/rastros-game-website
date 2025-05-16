@@ -102,7 +102,7 @@
         </ul>
       </nav>
 
-      <div id="overlay" aria-hidden="true"></div>
+      <div id="overlay-header" aria-hidden="true"></div>
     </header>
     <main>
       <section class="section-game"></section>
@@ -119,14 +119,6 @@
         <h1 class="btn-title-suspects">Suspeitos</h1>
       </button>
       <div class="suspects-container" id="suspects-container" inert></div>
-      <button
-        class="btn-close-suspects"
-        id="close-suspects-btn"
-        aria-label="close suspects"
-      >
-        <ion-icon name="close-outline" class="icon-close-suspects"></ion-icon>
-        <h1 class="btn-title-close-suspects">Fechar</h1>
-      </button>
       <!--  -->
       <button
         class="btn-open-locals"
@@ -138,7 +130,7 @@
         <ion-icon name="location-outline" class="icon-locals"></ion-icon>
         <h1 class="btn-title-locals">Locais</h1>
       </button>
-      <!-- <div class="locals-container"></div> -->
+      <div class="locals-container" id="locals-container" inert></div>
       <button
         class="btn-open-weapons"
         id="open-weapons-btn"
@@ -149,7 +141,18 @@
         <ion-icon name="hammer-outline" class="icon-weapons"></ion-icon>
         <h1 class="btn-title-weapons">Armas</h1>
       </button>
-      <!-- <div class="weapons-container"></div> -->
+      <div class="weapons-container" id="weapons-container" inert></div>
+
+      <button
+        class="btn-close-factors"
+        id="close-factors-btn"
+        aria-label="close factors"
+      >
+        <ion-icon name="close-outline" class="icon-close-factors"></ion-icon>
+        <h1 class="btn-title-close-factors">Fechar</h1>
+      </button>
+
+      <div id="overlay-footer" aria-hidden="true"></div>
     </footer>
   </body>
 </html>

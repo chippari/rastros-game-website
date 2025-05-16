@@ -2,10 +2,11 @@
 /* GENERAL CODE */
 /*===============================*/
 
-const overlay = document.getElementById('overlay');
+const overlayHeader = document.getElementById('overlay-header');
+const overlayFooter = document.getElementById('overlay-footer');
 
 /*===============================*/
-/* BUTTONS NAVBAR CODE */
+/* BUTTONS NAVBAR HEADER CODE */
 /*===============================*/
 
 const openBtn = document.getElementById('open-sidebar-btn');
@@ -26,10 +27,10 @@ function closeSidebar() {
 
 openBtn.addEventListener('click', openSidebar);
 closeBtn.addEventListener('click', closeSidebar);
-overlay.addEventListener('click', closeSidebar);
+overlayHeader.addEventListener('click', closeSidebar);
 
 /*===============================*/
-/* BUTTONS HINT CODE */
+/* BUTTONS HINT HEADER CODE */
 /*===============================*/
 
 const openHintBtn = document.getElementById('open-hint-btn');
@@ -50,27 +51,111 @@ function closeHint() {
 
 openHintBtn.addEventListener('click', openHint);
 closeHintBtn.addEventListener('click', closeHint);
-overlay.addEventListener('click', closeHint);
+overlayHeader.addEventListener('click', closeHint);
 
 /*===============================*/
-/* BUTTONS SUSPECTS CODE */
+/* BUTTONS FOOTER CODE */
 /*===============================*/
 
 const openSuspectsBtn = document.getElementById('open-suspects-btn');
-const closeSuspectsBtn = document.getElementById('open-suspects-btn');
 const suspectsContainer = document.getElementById('suspects-container');
 
+const openLocalsBtn = document.getElementById('open-locals-btn');
+const localsContainer = document.getElementById('locals-container');
+
+const openWeaponsBtn = document.getElementById('open-weapons-btn');
+const weaponsContainer = document.getElementById('weapons-container');
+
+const closeFactorsBtn = document.getElementById('close-factors-btn');
+
+// Função para fechar qualquer container aberto
+function closeAnyOpenContainer() {
+  if (suspectsContainer.classList.contains('show')) {
+    suspectsContainer.classList.remove('show');
+    suspectsContainer.setAttribute('inert', '');
+    openSuspectsBtn.style.display = 'flex';
+    openSuspectsBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (localsContainer.classList.contains('show')) {
+    localsContainer.classList.remove('show');
+    localsContainer.setAttribute('inert', '');
+    openLocalsBtn.style.display = 'flex';
+    openLocalsBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (weaponsContainer.classList.contains('show')) {
+    weaponsContainer.classList.remove('show');
+    weaponsContainer.setAttribute('inert', '');
+    openWeaponsBtn.style.display = 'flex';
+    openWeaponsBtn.setAttribute('aria-expanded', 'false');
+  }
+}
+
+// Função para redefinir a ordem padrão dos botões
+function resetButtonsOrder() {
+  openSuspectsBtn.style.order = '1';
+  openLocalsBtn.style.order = '2';
+  openWeaponsBtn.style.order = '3';
+  closeFactorsBtn.style.order = '4';
+}
+
+// Função para abrir Suspeitos
 function openSuspects() {
+  closeAnyOpenContainer(); // Fecha qualquer container aberto antes
   suspectsContainer.classList.add('show');
-  openSuspectsBtn.setAttribute('aria-expanded', 'true');
   suspectsContainer.removeAttribute('inert');
+  openSuspectsBtn.style.display = 'none';
+  openSuspectsBtn.setAttribute('aria-expanded', 'true');
+
+  openSuspectsBtn.style.order = '4';
+  openLocalsBtn.style.order = '2';
+  openWeaponsBtn.style.order = '3';
+  closeFactorsBtn.style.order = '1';
+
+  closeFactorsBtn.style.display = 'flex';
 }
 
-function closeSuspects() {
-  suspectsContainer.classList.remove('show');
-  openSuspectsBtn.setAttribute('aria-expanded', 'false');
-  suspectsContainer.setAttribute('inert', '');
+// Função para abrir Locais
+function openLocals() {
+  closeAnyOpenContainer(); // Fecha qualquer container aberto antes
+  localsContainer.classList.add('show');
+  localsContainer.removeAttribute('inert');
+  openLocalsBtn.style.display = 'none';
+  openLocalsBtn.setAttribute('aria-expanded', 'true');
+
+  openSuspectsBtn.style.order = '1';
+  openLocalsBtn.style.order = '4';
+  openWeaponsBtn.style.order = '3';
+  closeFactorsBtn.style.order = '2';
+
+  closeFactorsBtn.style.display = 'flex';
 }
 
+// Função para abrir Armas
+function openWeapons() {
+  closeAnyOpenContainer(); // Fecha qualquer container aberto antes
+  weaponsContainer.classList.add('show');
+  weaponsContainer.removeAttribute('inert');
+  openWeaponsBtn.style.display = 'none';
+  openWeaponsBtn.setAttribute('aria-expanded', 'true');
+
+  openSuspectsBtn.style.order = '1';
+  openLocalsBtn.style.order = '2';
+  openWeaponsBtn.style.order = '4';
+  closeFactorsBtn.style.order = '3';
+
+  closeFactorsBtn.style.display = 'flex';
+}
+
+// Função para fechar tudo
+function closeFactors() {
+  closeAnyOpenContainer();
+  resetButtonsOrder();
+  closeFactorsBtn.style.display = 'none';
+}
+
+// Event Listeners
 openSuspectsBtn.addEventListener('click', openSuspects);
-// closeSuspectsBtn.addEventListener('click', closeSuspects);
+openLocalsBtn.addEventListener('click', openLocals);
+openWeaponsBtn.addEventListener('click', openWeapons);
+closeFactorsBtn.addEventListener('click', closeFactors);
+overlayFooter.addEventListener('click', closeFactors);

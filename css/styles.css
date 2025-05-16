@@ -49,7 +49,7 @@
   transform: translateX(0%);
 }
 
-.hint-container.show ~ #overlay {
+.hint-container.show ~ #overlay-header {
   display: block;
 }
 
@@ -127,7 +127,7 @@
   transform: translateX(0%);
 }
 
-.navbar.show ~ #overlay {
+.navbar.show ~ #overlay-header {
   display: block;
 }
 
@@ -187,7 +187,7 @@
   text-shadow: 0px 0px 0px #fff0;
 }
 
-#overlay {
+#overlay-header {
   background-color: #1822259c;
   position: fixed;
   inset: 0;
@@ -213,6 +213,7 @@
 
 .footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
@@ -221,6 +222,15 @@
   position: relative;
 
   background-color: #182225;
+}
+
+#overlay-footer {
+  background-color: #1822259c;
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+
+  display: none;
 }
 
 /*===============================*/
@@ -232,8 +242,6 @@
   width: calc(100% / 3);
 
   background: none;
-  border: none;
-  padding: 0;
   cursor: pointer;
 
   display: flex;
@@ -246,18 +254,17 @@
   padding: 0 4.8rem;
 
   z-index: 100;
+  order: 1;
 }
 
-.btn-close-suspects {
+.btn-close-factors {
   height: 7rem;
   width: calc(100% / 3);
 
   background: none;
-  border: none;
-  padding: 0;
   cursor: pointer;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -266,23 +273,39 @@
   padding: 0 4.8rem;
 
   z-index: 100;
+  order: 4;
 }
 
-.btn-open-suspects:hover,
-.btn-open-suspects:active,
-.btn-close-suspects:hover,
-.btn-close-suspects:active {
+.btn-close-factors:hover,
+.btn-close-factors:active {
   background-color: #253439;
 }
 
-.icon-suspects,
-.icon-close-suspects {
+.icon-close-factors {
   font-size: 4rem;
   color: #b5c7cf;
 }
 
-.btn-title-suspects,
-.btn-title-close-suspects {
+.btn-title-close-factors {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.btn-open-suspects:hover,
+.btn-open-suspects:active {
+  background-color: #253439;
+}
+
+.icon-suspects {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-suspects {
   font-size: 2.8rem;
   font-family: 'Ibarra Real Nova', serif;
   font-weight: 700;
@@ -311,7 +334,7 @@
   transform: translateY(calc(0% - 7rem));
 }
 
-.suspects-container.show ~ #overlay {
+.suspects-container.show ~ #overlay-footer {
   display: block;
 }
 
@@ -322,7 +345,6 @@
 .btn-open-locals,
 .btn-close-locals {
   background: none;
-  border: none;
   padding: 0;
   cursor: pointer;
 
@@ -339,6 +361,7 @@
   border-bottom: 0.1rem solid #b5c7cf;
 
   z-index: 100;
+  order: 2;
 }
 
 .btn-open-locals:hover,
@@ -360,8 +383,29 @@
   color: #b5c7cf;
 }
 
-/* .locals-container {
-} */
+.locals-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(80rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.locals-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.locals-container.show ~ #overlay-footer {
+  display: block;
+}
 
 /*===============================*/
 /* FOOTER WEAPONS */
@@ -373,8 +417,6 @@
   width: calc(100% / 3);
 
   background: none;
-  border: none;
-  padding: 0;
   cursor: pointer;
 
   display: flex;
@@ -387,6 +429,7 @@
   padding: 0 4.8rem;
 
   z-index: 100;
+  order: 3;
 }
 
 .btn-open-weapons:hover,
@@ -408,5 +451,68 @@
   color: #b5c7cf;
 }
 
-/* .weapons-container {
-} */
+.weapons-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(80rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.weapons-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.weapons-container.show ~ #overlay-footer {
+  display: block;
+}
+
+/*===============================*/
+/* FOOTER CLOSE BUTTON */
+/*===============================*/
+
+.btn-close-factors {
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background: none;
+  cursor: pointer;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+  order: 4;
+}
+
+.btn-close-factors:hover,
+.btn-close-factors:active {
+  background-color: #253439;
+}
+
+.icon-close-factors {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-close-factors {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
