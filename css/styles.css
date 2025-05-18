@@ -201,10 +201,84 @@
 /*===============================*/
 
 .section-game {
+  width: 100vw;
   height: calc(100vh - 14rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: #253439;
   border-left: 0.1rem solid #b5c7cf;
   border-right: 0.1rem solid #b5c7cf;
+}
+
+.game-container {
+  width: min(130rem, 100%);
+  height: calc(100vh - 14rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Temporario */
+  border-left: 0.1rem solid #b5c7cf;
+  border-right: 0.1rem solid #b5c7cf;
+  background-color: #182225;
+}
+
+.clues-container {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 2rem;
+  border-right: 0.1rem solid #b5c7cf;
+}
+
+.clues-title {
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+.clues-container ul {
+  width: 100%;
+  height: 100%;
+
+  list-style-position: inside;
+  padding-left: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.clues-container li {
+  font-size: 2rem;
+
+  text-indent: -1rem;
+}
+
+.deduction-chart-container {
+  width: 50%;
+  height: 100%;
+}
+
+.chart-container {
+  width: 100%;
+  height: 60%;
+
+  border-bottom: 0.1rem solid #b5c7cf;
+}
+
+.deduction-container {
+  width: 100%;
+  height: 40%;
 }
 
 /*===============================*/
