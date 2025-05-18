@@ -108,7 +108,9 @@
       <section class="section-game">
         <div class="game-container">
           <div class="clues-container">
-            <div class="clues-title">Pistas e Indicios</div>
+            <div class="clues-title">
+              <h1>Pistas e Indícios</h1>
+            </div>
             <ul>
               <li>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -144,7 +146,40 @@
           </div>
           <div class="deduction-chart-container">
             <div class="chart-container"></div>
-            <div class="deduction-container"></div>
+            <div class="deduction-container">
+              <form class="deduction-form" name="game-deduction">
+                <div>
+                  <label for="select-suspect">Quem?</label>
+                  <select name="select-suspect" id="select-suspect" required>
+                    <option value="">Opções de Suspeitos:</option>
+                    <option value="tio">Tio Midnight</option>
+                    <option value="arqueologa">Arqueóloga Ecru</option>
+                    <option value="esquiador">Esquiador Sunflower</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="select-weapons">Com o quê?</label>
+                  <select name="select-weapons" id="select-weapons" required>
+                    <option value="">Opções de Armas:</option>
+                    <option value="chocolate">Chocolate Quente</option>
+                    <option value="cachecol">Cachecol</option>
+                    <option value="osso">Osso Gigantesco</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="select-locals">Onde?</label>
+                  <select name="select-locals" id="select-locals" required>
+                    <option value="">Opções de Locais:</option>
+                    <option value="restaurante">Restaurante</option>
+                    <option value="agencia-turismo">Agência de Turismo</option>
+                    <option value="estacao-esqui">Estação de Esqui</option>
+                  </select>
+                </div>
+                <div class="confirm-container">
+                  <button class="confirm-btn">Confirmar</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -160,7 +195,26 @@
         <ion-icon name="people-outline" class="icon-suspects"></ion-icon>
         <h1 class="btn-title-suspects">Suspeitos</h1>
       </button>
-      <div class="suspects-container" id="suspects-container" inert></div>
+      <div class="suspects-container" id="suspects-container" inert>
+        <div class="suspect">
+          <div class="suspect-title">
+            <img src="" alt="Rastros Logo Photo" />
+            <h1>Tio Midnight</h1>
+          </div>
+          <div class="suspect-description"></div>
+          <div class="suspect-details"></div>
+        </div>
+        <div class="suspect">
+          <div class="suspect-title"></div>
+          <div class="suspect-description"></div>
+          <div class="suspect-details"></div>
+        </div>
+        <div class="suspect">
+          <div class="suspect-title"></div>
+          <div class="suspect-description"></div>
+          <div class="suspect-details"></div>
+        </div>
+      </div>
       <!--  -->
       <button
         class="btn-open-locals"
