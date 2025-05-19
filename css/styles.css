@@ -473,7 +473,7 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: min(calc(70rem - 14rem), calc(100% - 14rem));
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
 
   background-color: #182225;
   border: 0.1rem solid #b5c7cf;
@@ -509,23 +509,67 @@
 
 .suspect-title {
   width: 100%;
-  height: 25%;
+  height: 20%;
 
   padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  gap: 1rem;
+}
+
+.suspect-title img {
+  width: 5rem;
+}
+
+.suspect-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
 }
 
 .suspect-description {
   width: 100%;
-  height: 50%;
+  height: 55%;
 
   padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suspect-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
 }
 
 .suspect-details {
   width: 100%;
   height: 25%;
 
+  border-top: 0.1rem solid #b5c7cf;
   padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suspect-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
 }
 
 /*===============================*/
@@ -578,10 +622,15 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: min(calc(80rem - 14rem), calc(100% - 14rem));
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
 
   background-color: #182225;
   border: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 0;
 
   transform: translateY(100%);
   transition: transform 0.75s ease;
@@ -595,6 +644,81 @@
 
 .locals-container.show ~ #overlay-footer {
   display: block;
+}
+
+.locals {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: 0rem 4.8rem;
+  background-color: #253439;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+}
+
+.locals-title {
+  width: 100%;
+  height: 20%;
+
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  gap: 1rem;
+}
+
+.locals-title img {
+  width: 5rem;
+}
+
+.locals-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
+}
+
+.locals-description {
+  width: 100%;
+  height: 55%;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locals-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.locals-details {
+  width: 100%;
+  height: 25%;
+
+  border-top: 0.1rem solid #b5c7cf;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locals-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
 }
 
 /*===============================*/
@@ -646,10 +770,15 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: min(calc(80rem - 14rem), calc(100% - 14rem));
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
 
   background-color: #182225;
   border: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 0;
 
   transform: translateY(100%);
   transition: transform 0.75s ease;
@@ -663,6 +792,81 @@
 
 .weapons-container.show ~ #overlay-footer {
   display: block;
+}
+
+.weapons {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: 0rem 4.8rem;
+  background-color: #253439;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+}
+
+.weapons-title {
+  width: 100%;
+  height: 20%;
+
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  gap: 1rem;
+}
+
+.weapons-title img {
+  width: 5rem;
+}
+
+.weapons-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
+}
+
+.weapons-description {
+  width: 100%;
+  height: 55%;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weapons-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.weapons-details {
+  width: 100%;
+  height: 25%;
+
+  border-top: 0.1rem solid #b5c7cf;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weapons-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
 }
 
 /*===============================*/
