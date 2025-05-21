@@ -6,7 +6,7 @@ const overlayHeader = document.getElementById('overlay-header');
 const overlayFooter = document.getElementById('overlay-footer');
 
 /*===============================*/
-/* BUTTONS NAVBAR HEADER CODE */
+/* NAVBAR HEADER BUTTONS CODE */
 /*===============================*/
 
 const openBtn = document.getElementById('open-sidebar-btn');
@@ -30,7 +30,7 @@ closeBtn.addEventListener('click', closeSidebar);
 overlayHeader.addEventListener('click', closeSidebar);
 
 /*===============================*/
-/* BUTTONS HINT HEADER CODE */
+/* HINT HEADER BUTTONS CODE */
 /*===============================*/
 
 const openHintBtn = document.getElementById('open-hint-btn');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*===============================*/
-/* BUTTONS FOOTER CODE */
+/* FOOTER BUTTONS CODE */
 /*===============================*/
 
 const openSuspectsBtn = document.getElementById('open-suspects-btn');
@@ -180,3 +180,75 @@ openLocalsBtn.addEventListener('click', openLocals);
 openWeaponsBtn.addEventListener('click', openWeapons);
 closeFactorsBtn.addEventListener('click', closeFactors);
 overlayFooter.addEventListener('click', closeFactors);
+
+/*===============================*/
+/* GAME WIN OR LOST BUTTON CODE */
+/*===============================*/
+
+// Defina a combinação correta aqui
+const correctAnswer = {
+  suspect: 'aurelion',
+  weapon: 'vela',
+  location: 'banheiro',
+};
+
+document.querySelector('.confirm-btn').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Obtenha os valores do formulário
+  const suspect = document.getElementById('select-suspect').value;
+  const weapon = document.getElementById('select-weapons').value;
+  const location = document.getElementById('select-locals').value;
+
+  // Overlay elements
+  const overlay = document.getElementById('overlay-result');
+  const title = document.getElementById('result-title');
+  const message = document.getElementById('result-message');
+  const btns = document.getElementById('overlay-buttons');
+
+  // Verifica se todos campos foram preenchidos
+  if (!suspect || !weapon || !location) {
+    title.textContent = 'Complete tudo!';
+    message.textContent =
+      'Você precisa preencher todas as opções antes de confirmar.';
+    btns.innerHTML = `<button onclick="document.getElementById('overlay-result').style.display='none'">OK</button>`;
+    overlay.style.display = 'flex';
+    return;
+  }
+
+  // Verificar combinação
+  if (
+    suspect === correctAnswer.suspect &&
+    weapon === correctAnswer.weapon &&
+    location === correctAnswer.location
+  ) {
+    title.textContent = 'Parabéns!';
+    message.textContent = 'Você acertou o caso!';
+    btns.innerHTML = `
+      <button onclick="window.location.href='menu.html'">Menu</button>
+      <button onclick="proximoCaso()">Jogar Próximo</button>
+    `;
+    overlay.style.display = 'flex';
+  } else {
+    title.textContent = 'Que pena!';
+    message.textContent = 'Você errou o caso. Tente novamente.';
+    btns.innerHTML = `
+      <button onclick="window.location.href='menu.html'">Menu</button>
+      <button onclick="jogarNovamente()">Jogar Novamente</button>
+    `;
+    overlay.style.display = 'flex';
+  }
+});
+
+// Funções para "Jogar Próximo" e "Jogar Novamente"
+function proximoCaso() {
+  // Troque pelo link da próxima fase ou recarregue a página/novo caso
+  window.location.href = 'proximo.html'; // ajuste o link!
+}
+
+function jogarNovamente() {
+  document.getElementById('overlay-result').style.display = 'none';
+  document.getElementById('select-suspect').value = '';
+  document.getElementById('select-weapons').value = '';
+  document.getElementById('select-locals').value = '';
+}

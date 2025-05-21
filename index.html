@@ -108,40 +108,35 @@
       <section class="section-game">
         <div class="game-container">
           <div class="clues-container">
+            <div class="case-title">
+              <h1>Assassinato em Holywood</h1>
+            </div>
+            <div class="case-text">
+              <p>
+                Quando foi convidado para um jantar chique numa mansão nas
+                colinas de Holywood, o dedetive Logan pensou que enfim se
+                tornara uma celebridade. Infelizmente, ele não era o convidado
+                de honra - estava ali apenas para solucionar o assassinato do
+                convidado de honra.
+              </p>
+            </div>
             <div class="clues-title">
               <h1>Pistas e Indícios</h1>
             </div>
             <ul>
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem, enim. Quae sit saepe voluptates explicabo ratione a in
-                quibusdam, impedit est, eaque, rerum corrupti doloremque esse.
-                Eum similique nulla ipsam.
+                A incrível Aurelion confiava no suspeito que levou um garfo.
               </li>
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem, enim. Quae sit saepe voluptates explicabo ratione a in
-                quibusdam, impedit est, eaque, rerum corrupti doloremque esse.
-                Eum similique nulla ipsam.
+                Midnight III ainda brandia um cano de alumínio quando o detetive
+                Logan chegou.
               </li>
+              <li>Uma vela pesada não foi encontrada no quarto.</li>
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem, enim. Quae sit saepe voluptates explicabo ratione a in
-                quibusdam, impedit est, eaque, rerum corrupti doloremque esse.
-                Eum similique nulla ipsam.
+                A dama Obsidian estava escondida debaixo das poltronas de veludo
+                vermelho.
               </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem, enim. Quae sit saepe voluptates explicabo ratione a in
-                quibusdam, impedit est, eaque, rerum corrupti doloremque esse.
-                Eum similique nulla ipsam.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem, enim. Quae sit saepe voluptates explicabo ratione a in
-                quibusdam, impedit est, eaque, rerum corrupti doloremque esse.
-                Eum similique nulla ipsam.
-              </li>
+              <li>O corpo foi achado dentro de uma banheira de mármore.</li>
             </ul>
           </div>
           <div class="deduction-board-container">
@@ -149,6 +144,77 @@
               <div class="board">
                 <div class="board-grids">
                   <!-- Grid 1: Suspects x Weapons -->
+                  <div class="board-ref"></div>
+                  <div class="board-ref"></div>
+                  <div class="board-title">
+                    <h1>Suspeitos</h1>
+                  </div>
+                  <div class="board-title">
+                    <h1>Locais</h1>
+                  </div>
+                  <div class="board-ref"></div>
+                  <div class="board-ref"></div>
+                  <table class="board-icons">
+                    <tbody>
+                      <tr>
+                        <td class="cell">
+                          <img
+                            src="img/svg/cartola-magico.svg"
+                            alt="Icon SVG"
+                          />
+                        </td>
+                        <td class="cell">
+                          <img src="img/svg/oculos-de-sol.svg" alt="Icon SVG" />
+                        </td>
+                        <td class="cell">
+                          <img
+                            src="img/svg/chapeu-feminino.svg"
+                            alt="Icon SVG"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="board-icons">
+                    <tbody>
+                      <tr>
+                        <td class="cell">
+                          <img
+                            src="img/svg/banheiro-enorme.svg"
+                            alt="Icon SVG"
+                          />
+                        </td>
+                        <td class="cell">
+                          <img src="img/svg/quarto.svg" alt="Icon SVG" />
+                        </td>
+                        <td class="cell">
+                          <img src="img/svg/projetor.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="board-title">
+                    <h1 class="vertical-title-board">Armas</h1>
+                  </div>
+                  <table class="board-icons">
+                    <tbody>
+                      <tr>
+                        <td class="cell">
+                          <img src="img/svg/garfo.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="cell">
+                          <img src="img/svg/cano.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="cell">
+                          <img src="img/svg/vela.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   <table class="board-grid">
                     <tbody>
                       <tr>
@@ -189,6 +255,31 @@
                     </tbody>
                   </table>
                   <!-- Grid 3: Locations x Suspects -->
+                  <div class="board-title">
+                    <h1 class="vertical-title-board">Locais</h1>
+                  </div>
+                  <table class="board-icons">
+                    <tbody>
+                      <tr>
+                        <td class="cell">
+                          <img
+                            src="img/svg/banheiro-enorme.svg"
+                            alt="Icon SVG"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="cell">
+                          <img src="img/svg/quarto.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="cell">
+                          <img src="img/svg/projetor.svg" alt="Icon SVG" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   <table class="board-grid">
                     <tbody>
                       <tr>
@@ -217,33 +308,33 @@
                   <label for="select-suspect">Quem?</label>
                   <select name="select-suspect" id="select-suspect" required>
                     <option value="">Opções de Suspeitos:</option>
-                    <option value="tio">Tio Midnight</option>
-                    <option value="arqueologa">Arqueóloga Ecru</option>
-                    <option value="esquiador">Esquiador Sunflower</option>
+                    <option value="aurelion">A incrível Aurelion</option>
+                    <option value="midnight">Midnight III</option>
+                    <option value="obsidian">Dama Obsidian</option>
                   </select>
                 </div>
                 <div>
                   <label for="select-weapons">Com o quê?</label>
                   <select name="select-weapons" id="select-weapons" required>
                     <option value="">Opções de Armas:</option>
-                    <option value="chocolate">Chocolate Quente</option>
-                    <option value="cachecol">Cachecol</option>
-                    <option value="osso">Osso Gigantesco</option>
+                    <option value="garfo">Garfo</option>
+                    <option value="cano">Cano de Alumínio</option>
+                    <option value="vela">Vela Pesada</option>
                   </select>
                 </div>
                 <div>
                   <label for="select-locals">Onde?</label>
                   <select name="select-locals" id="select-locals" required>
                     <option value="">Opções de Locais:</option>
-                    <option value="restaurante">Restaurante</option>
-                    <option value="agencia-turismo">Agência de Turismo</option>
-                    <option value="estacao-esqui">Estação de Esqui</option>
+                    <option value="banheiro">Banheiro Enorme</option>
+                    <option value="quarto">Quarto</option>
+                    <option value="sala">Sala de Projeção</option>
                   </select>
                 </div>
-                <div class="confirm-container">
-                  <button class="confirm-btn">Confirmar</button>
-                </div>
               </form>
+              <div class="confirm-container">
+                <button class="confirm-btn">Confirmar</button>
+              </div>
             </div>
           </div>
         </div>
@@ -263,53 +354,50 @@
       <div class="suspects-container" id="suspects-container" inert>
         <div class="suspect">
           <div class="suspect-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/cartola-magico.svg" alt="Icon SVG" />
+            <h1>A incrível Aurelion</h1>
           </div>
           <div class="suspect-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Ilusionista especializada no número de serrar o marido de alguém
+              ao meio, fazendo o corpo del sumir em seguida.
             </p>
           </div>
           <div class="suspect-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>1,68 metro - canhota - olhos verdes - cabelo louro</p>
           </div>
         </div>
         <div class="suspect">
           <div class="suspect-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/oculos-de-sol.svg" alt="Icon SVG" />
+            <h1>Midnight III</h1>
           </div>
           <div class="suspect-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Neto do fundador da Midnight Movies, um homem que venceu na vida
+              por conta própria, como ele diz.
             </p>
           </div>
           <div class="suspect-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>
+              1,73 metro - canhoto - olhos castanhos escuros - cabelo castanho
+              escuro
+            </p>
           </div>
         </div>
         <div class="suspect">
           <div class="suspect-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/chapeu-feminino.svg" alt="Icon SVG" />
+            <h1>Dama Obsidian</h1>
           </div>
           <div class="suspect-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Autora de livros de mistério que já vendeu mais exemplares que a
+              Bíblia e Shakespeare somados.
             </p>
           </div>
           <div class="suspect-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>1,63 metro - canhota - olhos verdes - cabelo preto</p>
           </div>
         </div>
       </div>
@@ -327,53 +415,44 @@
       <div class="locals-container" id="locals-container" inert>
         <div class="locals">
           <div class="locals-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/banheiro-enorme.svg" alt="Icon SVG" />
+            <h1>O Banheiro Enorme</h1>
           </div>
           <div class="locals-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
-            </p>
+            <p>Um banheiro maior do que a casa do detetive Logan.</p>
           </div>
           <div class="locals-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Ambiente Interno</p>
           </div>
         </div>
         <div class="locals">
           <div class="locals-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/quarto.svg" alt="Icon SVG" />
+            <h1>O Quarto</h1>
           </div>
           <div class="locals-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Uma cama king-size californiana, desarrumada, que fica em um
+              quarto branco imaculado.
             </p>
           </div>
           <div class="locals-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Ambiente Interno</p>
           </div>
         </div>
         <div class="locals">
           <div class="locals-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/projetor.svg" alt="Icon SVG" />
+            <h1>A Sala de Projeção</h1>
           </div>
           <div class="locals-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Poltronas de veludo vermelho e uma máquina de pipoca tornam
+              inesquecível a experiência de assistir a um filme.
             </p>
           </div>
           <div class="locals-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Ambiente Interno</p>
           </div>
         </div>
       </div>
@@ -391,53 +470,44 @@
       <div class="weapons-container" id="weapons-container" inert>
         <div class="weapons">
           <div class="weapons-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/garfo.svg" alt="Icon SVG" />
+            <h1>Um Garfo</h1>
           </div>
           <div class="weapons-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Na verdade, muito mais sinistro do que uma faca, se pensarmos bem.
             </p>
           </div>
           <div class="weapons-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Peso Leve</p>
           </div>
         </div>
         <div class="weapons">
           <div class="weapons-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/cano.svg" alt="Icon SVG" />
+            <h1>Um Cano de Alumínio</h1>
           </div>
           <div class="weapons-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Mais seguro que os de chumbo, a menos que acerte a sua cabeça.
             </p>
           </div>
           <div class="weapons-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Peso Médio</p>
           </div>
         </div>
         <div class="weapons">
           <div class="weapons-title">
-            <img src="img/svg/party-hat.svg" alt="Icon SVG" />
-            <h1>Tio Midnight</h1>
+            <img src="img/svg/vela.svg" alt="Icon SVG" />
+            <h1>Uma Vela Pesada</h1>
           </div>
           <div class="weapons-description">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
-              possimus dolor quidem dolore tempora ut vitae voluptatibus impedit
-              laboriosam sed itaque accusamus odit quos vel dignissimos sequi
-              cumque nam id.
+              Pesada o bastante para matar, embora ilumine de leve o ambiente.
             </p>
           </div>
           <div class="weapons-details">
-            <p>Lorem - ipsum - dolor - sit - amet</p>
+            <p>Peso Médio</p>
           </div>
         </div>
       </div>
@@ -453,5 +523,13 @@
 
       <div id="overlay-footer" aria-hidden="true"></div>
     </footer>
+
+    <div id="overlay-result" class="overlay-result" style="display: none">
+      <div class="overlay-content">
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+        <div class="overlay-buttons" id="overlay-buttons"></div>
+      </div>
+    </div>
   </body>
 </html>
