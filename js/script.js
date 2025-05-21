@@ -53,6 +53,27 @@ openHintBtn.addEventListener('click', openHint);
 closeHintBtn.addEventListener('click', closeHint);
 overlayHeader.addEventListener('click', closeHint);
 
+//
+//
+
+const iconStates = [
+  '', // empty
+  '<ion-icon name="close-outline"></ion-icon>', // X
+  '<ion-icon name="checkmark-outline"></ion-icon>', // Check
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.board-grid .cell').forEach((cell) => {
+    cell.dataset.state = '0';
+    cell.addEventListener('click', function () {
+      let state = parseInt(this.dataset.state) || 0;
+      state = (state + 1) % 3;
+      this.dataset.state = state.toString();
+      this.innerHTML = iconStates[state];
+    });
+  });
+});
+
 /*===============================*/
 /* BUTTONS FOOTER CODE */
 /*===============================*/
