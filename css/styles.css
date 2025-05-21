@@ -392,8 +392,6 @@
 }
 
 .board-grid td {
-  width: 5.2rem;
-  height: 5.2rem;
   border: 0.1rem solid #b5c7cf;
   background: #182225;
   text-align: center;
