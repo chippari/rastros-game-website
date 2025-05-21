@@ -80,13 +80,22 @@
 }
 
 .hint-info {
+  width: 100%;
+  height: calc(100vh - 7rem);
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: calc(100vh - 7rem);
-  width: 100%;
-  overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  align-items: flex-start;
+
+  padding: 2.4rem 4.8rem;
+}
+
+.hint-info p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
 }
 
 .rastros-logo {
