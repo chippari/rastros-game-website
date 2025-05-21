@@ -1,7 +1,7 @@
 /* 
 # Colors Palette:
 >> #182225
->> #253439 (main color dark
+>> #253439 (main color dark)
 >> #49656F
 >> #B5C7CF (main color light)
 >> #CEDADF
@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*1 rem = 10 px*/
   overflow-x: hidden;
 }
 
