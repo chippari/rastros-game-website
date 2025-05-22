@@ -24,7 +24,8 @@
   cursor: pointer;
 }
 
-.icon-hint {
+.icon-open-hint,
+.icon-close-hint {
   font-size: 4rem;
   color: #b5c7cf;
 }
@@ -230,7 +231,6 @@
   align-items: center;
   justify-content: center;
 
-  /* Temporario */
   border-left: 0.1rem solid #b5c7cf;
   border-right: 0.1rem solid #b5c7cf;
   background-color: #182225;
@@ -245,7 +245,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 2rem 2rem;
+  padding: 2rem;
   border-right: 0.1rem solid #b5c7cf;
 }
 
@@ -424,27 +424,27 @@ td:active {
   align-items: center;
 
   padding: 2rem;
-  gap: 2rem;
 }
 
 .deduction-form {
-  width: 50%;
+  width: 100%;
   height: 100%;
 
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 4rem;
+}
+
+.deduction-option {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.deduction-option {
-  width: 100%;
-  height: calc(100% / 3);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  margin-bottom: 1.6rem;
+.deduction-option:nth-child(3) {
+  justify-content: flex-start;
 }
 
 .deduction-form label {
@@ -460,7 +460,7 @@ td:active {
 
 .deduction-form input,
 .deduction-form select {
-  width: min(25rem, 100%);
+  width: 100%;
   height: 3rem;
 
   border: 0.1rem solid #b5c7cf;
@@ -477,17 +477,14 @@ td:active {
 }
 
 .confirm-container {
-  width: 50%;
-  height: 100%;
-
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 .confirm-btn {
-  width: min(25rem, 100%);
-  height: 5rem;
+  width: 100%;
+  height: 6.4rem;
 
   background: #253439;
   border: 0.1rem solid #b5c7cf;
@@ -501,8 +498,6 @@ td:active {
   cursor: pointer;
 
   transition: 0.3s ease;
-
-  margin-bottom: 1.6rem;
 }
 
 .confirm-btn:hover,
@@ -559,30 +554,6 @@ td:active {
 
   z-index: 100;
   order: 1;
-}
-
-.btn-close-factors {
-  height: 7rem;
-  width: calc(100% / 3);
-
-  background: none;
-  cursor: pointer;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #182225;
-  border: 0.1rem solid #b5c7cf;
-  padding: 0 4.8rem;
-
-  z-index: 100;
-  order: 4;
-}
-
-.btn-close-factors:hover,
-.btn-close-factors:active {
-  background-color: #253439;
 }
 
 .icon-close-factors {
@@ -726,8 +697,7 @@ td:active {
 /* FOOTER LOCALS */
 /*===============================*/
 
-.btn-open-locals,
-.btn-close-locals {
+.btn-open-locals {
   background: none;
   padding: 0;
   cursor: pointer;
@@ -749,7 +719,7 @@ td:active {
 }
 
 .btn-open-locals:hover,
-.btn-close-locals:active {
+.btn-open-locals:active {
   background-color: #253439;
 }
 
@@ -875,8 +845,7 @@ td:active {
 /* FOOTER WEAPONS */
 /*===============================*/
 
-.btn-open-weapons,
-.btn-close-weapons {
+.btn-open-weapons {
   height: 7rem;
   width: calc(100% / 3);
 
@@ -897,7 +866,7 @@ td:active {
 }
 
 .btn-open-weapons:hover,
-.btn-close-weapons:active {
+.btn-open-weapons:active {
   background-color: #253439;
 }
 

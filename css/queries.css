@@ -1,0 +1,417 @@
+/* "rem" and "em" do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/*=============================================================*/
+/* BETWEEN 1900px and 1930px (width) and BELOW 900px (height) */
+/*============================================================*/
+/* 1900px = 118.75em / 1930px = 120.625em / 900px = 56,25em*/
+
+@media (min-width: 118.75em) and (max-width: 120.625em) and (max-height: 56.25em) {
+  /* Hint Containers */
+  .hint-info p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  /* Clues Containers */
+  .case-title h1,
+  .clues-title h1 {
+    font-size: 2.4rem;
+  }
+
+  .case-text {
+    margin-bottom: 1.6rem;
+  }
+
+  .case-text p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .clues-container ul {
+    gap: 1.6rem;
+  }
+
+  .clues-container li {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  /* Board Containers */
+  .board-grids {
+    display: grid;
+    grid-template-columns: repeat(2, 4rem) repeat(2, 12rem);
+    grid-template-rows: repeat(2, 4rem) repeat(2, 12rem);
+  }
+
+  .board-grid td {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .board-title h1,
+  .board-title-vertical h1 {
+    font-size: 1.6rem;
+  }
+
+  .board-icons img,
+  .board-icons-vertical img {
+    width: 2.4rem;
+  }
+
+  /* Deduction Containers */
+  .deduction-container {
+    padding: 1.4rem;
+  }
+
+  .deduction-form {
+    gap: 2rem 6rem;
+  }
+
+  .deduction-form label {
+    height: 2.4rem;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .deduction-form input,
+  .deduction-form select {
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .confirm-btn {
+    height: 5.8rem;
+    font-size: 2.4rem;
+  }
+}
+
+/*===============================================*/
+/* BELOW 1500px (width) and BELOW 960px (height) */
+/*===============================================*/
+/* 1500px = 93,75em / 960px = 60em*/
+
+@media (max-width: 93.75em) and (max-height: 60em) {
+  /* Hint Containers */
+
+  .hint-info p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  /* Clues Containers */
+  .case-title h1,
+  .clues-title h1 {
+    font-size: 2.4rem;
+  }
+
+  .case-text {
+    margin-bottom: 1.6rem;
+  }
+
+  .case-text p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .clues-container ul {
+    gap: 1.6rem;
+  }
+
+  .clues-container li {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  /* Board Containers */
+  .board-grids {
+    display: grid;
+    grid-template-columns: repeat(2, 4.4rem) repeat(2, 13.2rem);
+    grid-template-rows: repeat(2, 4.4rem) repeat(2, 13.2rem);
+  }
+
+  .board-grid td {
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 3.6rem;
+  }
+
+  .board-title h1,
+  .board-title-vertical h1 {
+    font-size: 1.8rem;
+  }
+
+  .board-icons img,
+  .board-icons-vertical img {
+    width: 2.8rem;
+  }
+
+  /* Footer Suspects, Locals and Weapons */
+  /* Suspects Containers */
+  .suspect-title img {
+    width: 3rem;
+  }
+
+  .suspect-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .suspect-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .suspect-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  /* Locals Containers */
+  .locals-title img {
+    width: 3rem;
+  }
+
+  .locals-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .locals-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .locals-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  /* Weapons Containers */
+  .weapons-title img {
+    width: 3rem;
+  }
+
+  .weapons-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .weapons-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .weapons-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+/*===============================================*/
+/* BELOW 1400px (width) and BELOW 800px (height) */
+/*===============================================*/
+/* 1400px = 87,5em / 800px = 50em*/
+
+@media (max-width: 87.5em) and (max-height: 50em) {
+  /* ================ */
+  /* Layout Game Page */
+  .header,
+  .footer {
+    height: 5rem;
+  }
+
+  .section-game {
+    height: calc(100vh - 10rem);
+  }
+
+  .game-container {
+    width: 100%;
+    height: calc(100vh - 10rem);
+    border-left: none;
+    border-right: none;
+  }
+
+  .btn-open-suspects,
+  .btn-open-locals,
+  .btn-open-weapons,
+  .btn-close-factors {
+    height: 5rem;
+  }
+
+  /* Header Containers */
+  .rastros-logo {
+    width: 12rem;
+  }
+
+  .icon-open-hint,
+  .icon-close-hint,
+  .icon-open-nav,
+  .icon-close-nav {
+    font-size: 3rem;
+  }
+
+  /* Footer Containers */
+  .icon-close-factors,
+  .icon-suspects,
+  .icon-locals,
+  .icon-weapons {
+    font-size: 2.4rem;
+  }
+
+  .btn-title-close-factors,
+  .btn-title-suspects,
+  .btn-title-locals,
+  .btn-title-weapons {
+    font-size: 2rem;
+  }
+  /* ================ */
+
+  /* Hint Containers */
+  .hint-info p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  /* Clues Containers */
+  .clues-container {
+    padding: 1rem;
+  }
+
+  .case-title h1,
+  .clues-title h1 {
+    font-size: 2rem;
+  }
+
+  .case-text {
+    margin-bottom: 1rem;
+  }
+
+  .case-text p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .clues-container ul {
+    gap: 1.2rem;
+  }
+
+  .clues-container li {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+
+  /* Board Containers */
+  .board {
+    padding: 1rem 8rem 0 0;
+  }
+
+  .board-grids {
+    display: grid;
+    grid-template-columns: repeat(2, 3.8rem) repeat(2, 11.4rem);
+    grid-template-rows: repeat(2, 3.8rem) repeat(2, 11.4rem);
+  }
+
+  .board-grid td {
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 3rem;
+  }
+
+  .board-title h1,
+  .board-title-vertical h1 {
+    font-size: 1.6rem;
+  }
+
+  .board-icons img,
+  .board-icons-vertical img {
+    width: 2.4rem;
+  }
+
+  /* Deduction Containers */
+  .deduction-container {
+    padding: 1rem;
+  }
+
+  .deduction-form {
+    gap: 1rem 4rem;
+  }
+
+  .deduction-form label {
+    height: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .deduction-form input,
+  .deduction-form select {
+    height: 2.4rem;
+    font-size: 1.4rem;
+  }
+
+  .confirm-btn {
+    height: 4.8rem;
+    font-size: 2rem;
+  }
+
+  /* Footer Suspects, Locals and Weapons */
+  /* Suspects Containers */
+  .suspect-title img {
+    width: 3rem;
+  }
+
+  .suspect-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .suspect-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .suspect-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  /* Locals Containers */
+  .locals-title img {
+    width: 3rem;
+  }
+
+  .locals-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .locals-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .locals-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  /* Weapons Containers */
+  .weapons-title img {
+    width: 3rem;
+  }
+
+  .weapons-title h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .weapons-description p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .weapons-details p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
