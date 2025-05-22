@@ -37,24 +37,54 @@ const openHintBtn = document.getElementById('open-hint-btn');
 const closeHintBtn = document.getElementById('close-hint-btn');
 const hintContainer = document.getElementById('hint-container');
 
-function openHint() {
+// Overlay elements
+const overlayHint = document.getElementById('overlay-hint');
+const confirmHintBtn = document.getElementById('confirm-hint-btn');
+const cancelHintBtn = document.getElementById('cancel-hint-btn');
+
+function showHint() {
   hintContainer.classList.add('show');
   openHintBtn.setAttribute('aria-expanded', 'true');
   hintContainer.removeAttribute('inert');
 }
 
-function closeHint() {
+function hideHint() {
   hintContainer.classList.remove('show');
   openHintBtn.setAttribute('aria-expanded', 'false');
   hintContainer.setAttribute('inert', '');
 }
 
-openHintBtn.addEventListener('click', openHint);
-closeHintBtn.addEventListener('click', closeHint);
-overlayHeader.addEventListener('click', closeHint);
+function openHintOverlay() {
+  overlayHint.style.display = 'flex';
+}
 
-//
-//
+function closeHintOverlay() {
+  overlayHint.style.display = 'none';
+}
+
+// Ao clicar no botão de abrir dica, mostra o overlay de confirmação
+openHintBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  openHintOverlay();
+});
+
+// Ao confirmar, mostra a dica e fecha o overlay
+confirmHintBtn.addEventListener('click', function () {
+  closeHintOverlay();
+  showHint();
+});
+
+// Ao cancelar, apenas fecha o overlay
+cancelHintBtn.addEventListener('click', function () {
+  closeHintOverlay();
+});
+
+closeHintBtn.addEventListener('click', hideHint);
+overlayHeader.addEventListener('click', hideHint);
+
+/*===============================*/
+/* GAME GRID ICONS CODE */
+/*===============================*/
 
 const iconStates = [
   '', // empty

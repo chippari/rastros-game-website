@@ -30,13 +30,3 @@ body {
   line-height: 1;
   color: #f3f6f7;
 }
-
-/*===============================*/
-/* GENERAL REUSABLE COMPONENTS*/
-/*===============================*/
-
-.container {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}

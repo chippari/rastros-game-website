@@ -105,8 +105,8 @@
             </button>
           </li>
           <li><a href="#">&#8618; Menu</a></li>
-          <li><a href="#">&#8618; Reiniciar</a></li>
-          <li><a href="#">&#8618; Voltar</a></li>
+          <li><a href=".">&#8618; Reiniciar</a></li>
+          <li><a href="#">&#8618; Outros Casos</a></li>
         </ul>
       </nav>
 
@@ -152,16 +152,32 @@
               <div class="board">
                 <div class="board-grids">
                   <!-- Grid 1: Suspects x Weapons -->
-                  <div class="board-ref"></div>
-                  <div class="board-ref"></div>
+                  <div
+                    class="board-empty"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="board-empty"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  ></div>
                   <div class="board-title">
                     <h1>Suspeitos</h1>
                   </div>
                   <div class="board-title">
                     <h1>Locais</h1>
                   </div>
-                  <div class="board-ref"></div>
-                  <div class="board-ref"></div>
+                  <div
+                    class="board-empty"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="board-empty"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  ></div>
                   <table class="board-icons">
                     <tbody>
                       <tr>
@@ -201,10 +217,10 @@
                       </tr>
                     </tbody>
                   </table>
-                  <div class="board-title">
-                    <h1 class="vertical-title-board">Armas</h1>
+                  <div class="board-title-vertical">
+                    <h1>Armas</h1>
                   </div>
-                  <table class="board-icons">
+                  <table class="board-icons-vertical">
                     <tbody>
                       <tr>
                         <td class="cell">
@@ -263,10 +279,10 @@
                     </tbody>
                   </table>
                   <!-- Grid 3: Locations x Suspects -->
-                  <div class="board-title">
-                    <h1 class="vertical-title-board">Locais</h1>
+                  <div class="board-title-vertical">
+                    <h1>Locais</h1>
                   </div>
-                  <table class="board-icons">
+                  <table class="board-icons-vertical">
                     <tbody>
                       <tr>
                         <td class="cell">
@@ -531,6 +547,17 @@
 
       <div id="overlay-footer" aria-hidden="true"></div>
     </footer>
+
+    <div id="overlay-hint" class="overlay-result" style="display: none">
+      <div class="overlay-content">
+        <h2>Dicas</h2>
+        <p>Isso pode facilitar demais o caso. Você deseja ver a dica?</p>
+        <div class="overlay-buttons">
+          <button id="confirm-hint-btn">Sim, quero a dica</button>
+          <button id="cancel-hint-btn">Cancelar</button>
+        </div>
+      </div>
+    </div>
 
     <div id="overlay-result" class="overlay-result" style="display: none">
       <div class="overlay-content">
