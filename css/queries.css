@@ -91,6 +91,72 @@
 /* 1500px = 93,75em / 960px = 60em*/
 
 @media (max-width: 93.75em) and (max-height: 60em) {
+  /* ================ */
+  /* Layout Game Page */
+  .header,
+  .footer {
+    height: 6rem;
+  }
+
+  .btn-hint-header,
+  .btn-nav-header {
+    width: 20%;
+    height: 6rem;
+  }
+
+  .logo-header {
+    width: 60%;
+    height: 6rem;
+  }
+
+  .rastros-logo {
+    width: 20%;
+    height: 6rem;
+  }
+
+  .section-game {
+    height: calc(100vh - 12rem);
+  }
+
+  .game-container {
+    width: 100%;
+    height: calc(100vh - 12rem);
+    border-left: none;
+    border-right: none;
+  }
+
+  .btn-open-suspects,
+  .btn-open-locals,
+  .btn-open-weapons,
+  .btn-close-factors {
+    height: 6rem;
+  }
+
+  /* Header Containers */
+  .icon-open-hint,
+  .icon-close-hint,
+  .icon-open-nav,
+  .icon-close-nav {
+    height: 6rem;
+    font-size: 3.4rem;
+  }
+
+  /* Footer Containers */
+  .icon-close-factors,
+  .icon-suspects,
+  .icon-locals,
+  .icon-weapons {
+    font-size: 3rem;
+  }
+
+  .btn-title-close-factors,
+  .btn-title-suspects,
+  .btn-title-locals,
+  .btn-title-weapons {
+    font-size: 2.4rem;
+  }
+  /* ================ */
+
   /* Hint Containers */
 
   .hint-info p {
@@ -245,6 +311,22 @@
     height: 5rem;
   }
 
+  .btn-hint-header,
+  .btn-nav-header {
+    width: 20%;
+    height: 5rem;
+  }
+
+  .logo-header {
+    width: 60%;
+    height: 5rem;
+  }
+
+  .rastros-logo {
+    width: 15%;
+    height: 5rem;
+  }
+
   .section-game {
     height: calc(100vh - 10rem);
   }
@@ -264,14 +346,11 @@
   }
 
   /* Header Containers */
-  .rastros-logo {
-    width: 12rem;
-  }
-
   .icon-open-hint,
   .icon-close-hint,
   .icon-open-nav,
   .icon-close-nav {
+    height: 5rem;
     font-size: 3rem;
   }
 

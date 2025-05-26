@@ -45,15 +45,17 @@
   </head>
   <body>
     <header class="header">
-      <button
-        class="btn-open-hint"
-        id="open-hint-btn"
-        aria-label="open hint"
-        aria-expanded="false"
-        aria-controls="hint"
-      >
-        <ion-icon name="bulb-outline" class="icon-open-hint"></ion-icon>
-      </button>
+      <div class="btn-hint-header">
+        <button
+          class="btn-open-hint"
+          id="open-hint-btn"
+          aria-label="open hint"
+          aria-expanded="false"
+          aria-controls="hint"
+        >
+          <ion-icon name="bulb-outline" class="icon-open-hint"></ion-icon>
+        </button>
+      </div>
       <div class="hint-container" id="hint-container" inert>
         <div class="hint-header">
           <h1 class="hint-title">Dicas</h1>
@@ -76,23 +78,21 @@
         </div>
       </div>
 
-      <a class="rastros-logo-container" href="#">
-        <img
-          src="img/logo/rastros-light-logo.png"
-          alt="Rastros Logo Photo"
-          class="rastros-logo"
-        />
-      </a>
+      <div class="logo-header">
+        <a href="#" class="rastros-logo" alt="Rastros Logo Photo"> </a>
+      </div>
 
-      <button
-        class="btn-open-nav"
-        id="open-sidebar-btn"
-        aria-label="open sidebar"
-        aria-expanded="false"
-        aria-controls="navbar"
-      >
-        <ion-icon name="menu-outline" class="icon-open-nav"></ion-icon>
-      </button>
+      <div class="btn-nav-header">
+        <button
+          class="btn-open-nav"
+          id="open-sidebar-btn"
+          aria-label="open sidebar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <ion-icon name="menu-outline" class="icon-open-nav"></ion-icon>
+        </button>
+      </div>
       <nav class="navbar" id="navbar" inert>
         <ul>
           <li>
