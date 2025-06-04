@@ -255,7 +255,7 @@ document.querySelector('.confirm-btn').addEventListener('click', function (e) {
     title.textContent = 'Parabéns!';
     message.textContent = 'Você acertou o caso!';
     btns.innerHTML = `
-      <button onclick="window.location.href='/index.html'">Menu</button>
+      <button onclick="window.location.href='https://chippari.github.io/rastros-game-website/'">Menu</button>
       <button onclick="proximoCaso()">Jogar Próximo</button>
     `;
     overlay.style.display = 'flex';
@@ -263,7 +263,7 @@ document.querySelector('.confirm-btn').addEventListener('click', function (e) {
     title.textContent = 'Que pena!';
     message.textContent = 'Você errou o caso. Tente novamente.';
     btns.innerHTML = `
-      <button onclick="window.location.href='/index.html'">Menu</button>
+      <button onclick="window.location.href='https://chippari.github.io/rastros-game-website/'">Menu</button>
       <button onclick="jogarNovamente()">Jogar Novamente</button>
     `;
     overlay.style.display = 'flex';
