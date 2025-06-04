@@ -45,15 +45,17 @@
   </head>
   <body>
     <header class="header">
-      <button
-        class="btn-open-hint"
-        id="open-hint-btn"
-        aria-label="open hint"
-        aria-expanded="false"
-        aria-controls="hint"
-      >
-        <ion-icon name="bulb-outline" class="icon-hint"></ion-icon>
-      </button>
+      <div class="btn-hint-header">
+        <button
+          class="btn-open-hint"
+          id="open-hint-btn"
+          aria-label="open hint"
+          aria-expanded="false"
+          aria-controls="hint"
+        >
+          <ion-icon name="bulb-outline" class="icon-open-hint"></ion-icon>
+        </button>
+      </div>
       <div class="hint-container" id="hint-container" inert>
         <div class="hint-header">
           <h1 class="hint-title">Dicas</h1>
@@ -62,7 +64,7 @@
             id="close-hint-btn"
             aria-label="close sidebar"
           >
-            <ion-icon name="close-outline" class="icon-close-nav"></ion-icon>
+            <ion-icon name="close-outline" class="icon-close-hint"></ion-icon>
           </button>
         </div>
         <div class="hint-info">
@@ -76,23 +78,21 @@
         </div>
       </div>
 
-      <a href="#">
-        <img
-          src="img/logo/rastros-light-logo.png"
-          alt="Rastros Logo Photo"
-          class="rastros-logo"
-        />
-      </a>
+      <div class="logo-header">
+        <a href="#" class="rastros-logo" alt="Rastros Logo Photo"> </a>
+      </div>
 
-      <button
-        class="btn-open-nav"
-        id="open-sidebar-btn"
-        aria-label="open sidebar"
-        aria-expanded="false"
-        aria-controls="navbar"
-      >
-        <ion-icon name="menu-outline" class="icon-open-nav"></ion-icon>
-      </button>
+      <div class="btn-nav-header">
+        <button
+          class="btn-open-nav"
+          id="open-sidebar-btn"
+          aria-label="open sidebar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <ion-icon name="menu-outline" class="icon-open-nav"></ion-icon>
+        </button>
+      </div>
       <nav class="navbar" id="navbar" inert>
         <ul>
           <li>
@@ -331,8 +331,8 @@
                 <div class="deduction-option">
                   <label for="select-suspect">Quem?</label>
                   <select name="select-suspect" id="select-suspect" required>
-                    <option value="">Opções de Suspeitos:</option>
-                    <option value="aurelion">A incrível Aurelion</option>
+                    <option value="">Suspeitos:</option>
+                    <option value="aurelion">Aurelion</option>
                     <option value="midnight">Midnight III</option>
                     <option value="obsidian">Dama Obsidian</option>
                   </select>
@@ -340,7 +340,7 @@
                 <div class="deduction-option">
                   <label for="select-weapons">Com o quê?</label>
                   <select name="select-weapons" id="select-weapons" required>
-                    <option value="">Opções de Armas:</option>
+                    <option value="">Armas:</option>
                     <option value="garfo">Garfo</option>
                     <option value="cano">Cano de Alumínio</option>
                     <option value="vela">Vela Pesada</option>
@@ -349,16 +349,16 @@
                 <div class="deduction-option">
                   <label for="select-locals">Onde?</label>
                   <select name="select-locals" id="select-locals" required>
-                    <option value="">Opções de Locais:</option>
+                    <option value="">Locais:</option>
                     <option value="banheiro">Banheiro Enorme</option>
                     <option value="quarto">Quarto</option>
                     <option value="sala">Sala de Projeção</option>
                   </select>
                 </div>
+                <div class="confirm-container">
+                  <button class="confirm-btn">Confirmar</button>
+                </div>
               </form>
-              <div class="confirm-container">
-                <button class="confirm-btn">Confirmar</button>
-              </div>
             </div>
           </div>
         </div>
@@ -384,7 +384,7 @@
           <div class="suspect-description">
             <p>
               Ilusionista especializada no número de serrar o marido de alguém
-              ao meio, fazendo o corpo del sumir em seguida.
+              ao meio, fazendo o corpo dele sumir em seguida.
             </p>
           </div>
           <div class="suspect-details">
