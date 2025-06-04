@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rastros - Início</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Ibarra Real Nova', serif;
+        background: url('../img-start/background-start.jpg') no-repeat center
+          center fixed;
+        background-size: cover;
+        color: #2c1c0f;
+      }
+
+      .start-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        position: relative;
+        gap: 1rem;
+        backdrop-filter: brightness(1);
+      }
+
+      .logo-container {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        width: 100%;
+        height: 100%;
+        background-image: url('../logo-start/rastros-light-logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .btn {
+        padding: 0.8rem 2rem;
+        background-color: rgba(44, 28, 15, 0.85);
+        border: 0.1rem solid #d9c7a8;
+        color: #f7f2e8;
+        font-size: 1.8rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 1rem;
+        font-family: inherit;
+        transition: 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .btn:hover {
+        background-color: #3b2a1a;
+      }
+
+      .btn-back {
+        padding: 0.8rem 2rem;
+        background-color: rgba(44, 28, 15, 0.85);
+        border: 0.1rem solid #d9c7a8;
+        color: #f7f2e8;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: inherit;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+        cursor: pointer;
+        display: none;
+        margin-top: 1rem;
+      }
+
+      .btn-back:hover {
+        background-color: #3b2a1a;
+      }
+
+      .difficulty-options,
+      .case-options {
+        display: none;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        align-items: center;
+      }
+
+      #backBtnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      @media (max-width: 544px) {
+        .btn {
+          font-size: 1.4rem;
+          padding: 0.6rem 1.5rem;
+          max-width: 220px;
+        }
+        .logo-container {
+          max-width: 60vw;
+        }
+        .btn-back {
+          font-size: 1.2rem;
+          padding: 0.6rem 1.5rem;
+        }
+        .start-container {
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="start-container">
+      <div class="logo-container">
+        <div class="logo"></div>
+      </div>
+      <button class="btn" id="startBtn">Start</button>
+      <div class="difficulty-options" id="difficultyOptions">
+        <button class="btn" onclick="showCases('easy')">Fácil</button>
+        <button class="btn" onclick="showCases('medium')">Médio</button>
+        <button class="btn" onclick="showCases('hard')">Difícil</button>
+      </div>
+      <div class="case-options" id="caseOptions"></div>
+      <div id="backBtnContainer">
+        <button class="btn-back" id="backBtn">Voltar</button>
+      </div>
+    </div>
+
+    <script>
+      const startBtn = document.getElementById('startBtn');
+      const difficultyOptions = document.getElementById('difficultyOptions');
+      const caseOptions = document.getElementById('caseOptions');
+      const backBtn = document.getElementById('backBtn');
+
+      const cases = {
+        easy: [
+          'caso1.html',
+          'caso2.html',
+          'caso3.html',
+          'caso4.html',
+          'caso5.html',
+        ],
+        medium: [
+          'caso6.html',
+          'caso7.html',
+          'caso8.html',
+          'caso9.html',
+          'caso10.html',
+        ],
+        hard: [
+          'caso11.html',
+          'caso12.html',
+          'caso13.html',
+          'caso14.html',
+          'caso15.html',
+        ],
+      };
+
+      startBtn.addEventListener('click', () => {
+        startBtn.style.display = 'none';
+        difficultyOptions.style.display = 'flex';
+        caseOptions.style.display = 'none';
+        backBtn.style.display = 'none';
+      });
+
+      function showCases(level) {
+        difficultyOptions.style.display = 'none';
+        caseOptions.innerHTML = '';
+        cases[level].forEach((link, i) => {
+          const btn = document.createElement('a');
+          btn.textContent = `Caso ${i + 1}`;
+          btn.classList.add('btn');
+          btn.href = link;
+          btn.target = '_self';
+          caseOptions.appendChild(btn);
+        });
+        caseOptions.style.display = 'flex';
+        backBtn.style.display = 'inline-block';
+      }
+
+      backBtn.addEventListener('click', () => {
+        caseOptions.style.display = 'none';
+        difficultyOptions.style.display = 'flex';
+        backBtn.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1147 @@
+/*===============================*/
+/* HEADER */
+/*===============================*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 7rem;
+  padding: 0 4.8rem;
+
+  position: relative;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+}
+
+.btn-hint-header {
+  width: 20%;
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-nav-header {
+  width: 20%;
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo-header {
+  width: 60%;
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rastros-logo {
+  width: 15%;
+  height: 7rem;
+
+  background-image: url('../img/logo/rastros-light-logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-open-hint,
+.btn-close-hint,
+.btn-open-nav,
+.btn-close-nav {
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+/* HINT CONTAINER */
+.hint-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(60rem, 100%);
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  transform: translateX(-100%);
+  transition: transform 0.75s ease;
+
+  z-index: 999;
+}
+
+.hint-container.show {
+  transform: translateX(0%);
+}
+
+.hint-container.show ~ #overlay-header {
+  display: block;
+}
+
+.hint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 7rem;
+  margin: 0 4.8rem;
+
+  position: relative;
+
+  background-color: #182225;
+  border-bottom: 0.1rem solid #b5c7cf;
+}
+
+.hint-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #b5c7cf;
+  background-color: #253439;
+  padding: 1rem 4.8rem;
+  border-radius: 0.5rem;
+
+  border: 0.1rem solid #b5c7cf;
+}
+
+.hint-info {
+  width: 100%;
+  height: calc(100vh - 7rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 2.4rem 4.8rem;
+}
+
+.hint-info p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+/* NAVBAR CONTAINER */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(45rem, 100%);
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  transform: translateX(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 999;
+}
+
+.navbar.show {
+  transform: translateX(0%);
+}
+
+.navbar.show ~ #overlay-header {
+  display: block;
+}
+
+.navbar ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navbar li:first-child {
+  padding: 0rem 4.8rem;
+  justify-content: flex-end;
+
+  margin-bottom: -2rem;
+}
+
+.navbar li:not(:first-child) {
+  justify-content: flex-start;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+}
+
+.btn-close-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  width: 100%;
+  padding: 2rem 4rem;
+
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #b5c7cf;
+  text-shadow: 2px 1px 0px #253439;
+
+  transition: 150ms ease;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  background-color: #253439;
+  color: #b5c7cf;
+  text-shadow: 0px 0px 0px #fff0;
+}
+
+#overlay-header {
+  background-color: #1822259c;
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+
+  display: none;
+}
+
+/*===============================*/
+/* SECTION GAME */
+/*===============================*/
+
+.section-game {
+  width: 100vw;
+  height: calc(100vh - 14rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #253439;
+  border-left: 0.1rem solid #b5c7cf;
+  border-right: 0.1rem solid #b5c7cf;
+}
+
+.game-container {
+  width: min(130rem, 100%);
+  height: calc(100vh - 14rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-left: 0.1rem solid #b5c7cf;
+  border-right: 0.1rem solid #b5c7cf;
+  background-color: #182225;
+}
+
+.clues-container {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem;
+  border-right: 0.1rem solid #b5c7cf;
+}
+
+.case-title {
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.6rem;
+}
+
+.case-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.case-text {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-bottom: 3.2rem;
+}
+
+.case-text p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.clues-title {
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 1.6rem;
+}
+
+.clues-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.clues-container ul {
+  width: 100%;
+  height: auto;
+
+  list-style-position: inside;
+  padding-left: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.clues-container li {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+
+  color: #f3f6f7;
+  text-indent: -1rem;
+}
+
+.deduction-board-container {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-container {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 0.1rem solid #b5c7cf;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 2rem 8rem 0 0;
+}
+
+.board-grids {
+  display: grid;
+  grid-template-columns: repeat(2, 5.2rem) repeat(2, 15.6rem);
+  grid-template-rows: repeat(2, 5.2rem) repeat(2, 15.6rem);
+}
+
+.board-title,
+.board-title-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-title h1,
+.board-title-vertical h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: capitalize;
+
+  color: #b5c7cf;
+}
+
+.board-title-vertical h1 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.board-icons td,
+.board-icons-vertical td {
+  text-align: center;
+}
+
+.board-icons img,
+.board-icons-vertical img {
+  width: 3rem;
+}
+
+.board-grid {
+  border-collapse: collapse;
+  background: #253439;
+  box-shadow: 0 0 0 0.2rem #b5c7cf;
+}
+
+.board-grid td {
+  width: 5.2rem;
+  height: 5.2rem;
+  border: 0.1rem solid #b5c7cf;
+  background: #182225;
+  text-align: center;
+
+  cursor: pointer;
+  font-size: 4rem;
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.board-grid td:hover,
+td:active {
+  background: #253439;
+}
+
+.deduction-container {
+  width: 100%;
+  height: 35%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.deduction-form {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+
+  gap: 2rem;
+}
+
+.deduction-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deduction-form label {
+  width: 100%;
+  height: 3rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #b5c7cf;
+
+  margin-bottom: 0.4rem;
+}
+
+.deduction-form input,
+.deduction-form select {
+  width: 100%;
+  height: 3rem;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 0.5rem;
+
+  color: #f3f6f7;
+  background-color: #253439;
+  font-family: inherit;
+  font-size: 2rem;
+}
+
+.deduction-form input::placeholder {
+  color: #f3f6f7;
+}
+
+.confirm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1 / 4;
+}
+
+.confirm-btn {
+  background: #253439;
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  padding: 1rem 8rem;
+}
+
+.confirm-btn:hover,
+.confirm-btn:active {
+  background-color: #b5c7cf;
+  color: #253439;
+}
+
+/*===============================*/
+/* FOOTER */
+/*===============================*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 7rem;
+
+  position: relative;
+
+  background-color: #182225;
+}
+
+#overlay-footer {
+  background-color: #1822259c;
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+
+  display: none;
+}
+
+/*===============================*/
+/* FOOTER SUSPECTS */
+/*===============================*/
+
+.btn-open-suspects {
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+  order: 1;
+}
+
+.icon-close-factors {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-close-factors {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.btn-open-suspects:hover,
+.btn-open-suspects:active {
+  background-color: #253439;
+}
+
+.icon-suspects {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-suspects {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.suspects-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 0;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.suspects-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.suspects-container.show ~ #overlay-footer {
+  display: block;
+}
+
+.suspect {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: 0rem 4.8rem;
+  background-color: #253439;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+}
+
+.suspect-title {
+  width: 100%;
+  height: 20%;
+
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.suspect-title img {
+  width: 4rem;
+}
+
+.suspect-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
+}
+
+.suspect-description {
+  width: 100%;
+  height: 55%;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suspect-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.suspect-details {
+  width: 100%;
+  height: 25%;
+
+  border-top: 0.1rem solid #b5c7cf;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suspect-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
+}
+
+/*===============================*/
+/* FOOTER LOCALS */
+/*===============================*/
+
+.btn-open-locals {
+  background: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background-color: #182225;
+  border-top: 0.1rem solid #b5c7cf;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  z-index: 100;
+  order: 2;
+}
+
+.btn-open-locals:hover,
+.btn-open-locals:active {
+  background-color: #253439;
+}
+
+.icon-locals {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-locals {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.locals-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 0;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.locals-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.locals-container.show ~ #overlay-footer {
+  display: block;
+}
+
+.locals {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: 0rem 4.8rem;
+  background-color: #253439;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+}
+
+.locals-title {
+  width: 100%;
+  height: 20%;
+
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.locals-title img {
+  width: 4rem;
+}
+
+.locals-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
+}
+
+.locals-description {
+  width: 100%;
+  height: 55%;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locals-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.locals-details {
+  width: 100%;
+  height: 25%;
+
+  border-top: 0.1rem solid #b5c7cf;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locals-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
+}
+
+/*===============================*/
+/* FOOTER WEAPONS */
+/*===============================*/
+
+.btn-open-weapons {
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+  order: 3;
+}
+
+.btn-open-weapons:hover,
+.btn-open-weapons:active {
+  background-color: #253439;
+}
+
+.icon-weapons {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-weapons {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+.weapons-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(calc(60rem - 14rem), calc(100% - 14rem));
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 0;
+
+  transform: translateY(100%);
+  transition: transform 0.75s ease;
+
+  z-index: 99;
+}
+
+.weapons-container.show {
+  transform: translateY(calc(0% - 7rem));
+}
+
+.weapons-container.show ~ #overlay-footer {
+  display: block;
+}
+
+.weapons {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: 0rem 4.8rem;
+  background-color: #253439;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+}
+
+.weapons-title {
+  width: 100%;
+  height: 20%;
+
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid #b5c7cf;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.weapons-title img {
+  width: 4rem;
+}
+
+.weapons-title h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #f3f6f7;
+}
+
+.weapons-description {
+  width: 100%;
+  height: 55%;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weapons-description p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: justify;
+  color: #f3f6f7;
+}
+
+.weapons-details {
+  width: 100%;
+  height: 25%;
+
+  border-top: 0.1rem solid #b5c7cf;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weapons-details p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3f6f7;
+}
+
+/*===============================*/
+/* FOOTER CLOSE BUTTON */
+/*===============================*/
+
+.btn-close-factors {
+  height: 7rem;
+  width: calc(100% / 3);
+
+  background: none;
+  cursor: pointer;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #182225;
+  border: 0.1rem solid #b5c7cf;
+  padding: 0 4.8rem;
+
+  z-index: 100;
+  order: 4;
+}
+
+.btn-close-factors:hover,
+.btn-close-factors:active {
+  background-color: #253439;
+}
+
+.icon-close-factors {
+  font-size: 4rem;
+  color: #b5c7cf;
+}
+
+.btn-title-close-factors {
+  font-size: 2.8rem;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #b5c7cf;
+}
+
+/*===============================*/
+/* WIN OR LOST GAME OVERLAY */
+/*===============================*/
+
+.overlay-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #182225d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.overlay-content {
+  width: min(60rem, 100%);
+  height: min(30rem, 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #253439;
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem #182225d5;
+  padding: 2rem;
+}
+
+.overlay-content h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #b5c7cf;
+
+  margin-bottom: 1.4rem;
+}
+
+.overlay-content p {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.overlay-buttons {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content button {
+  width: min(25rem, 100%);
+
+  background: #182225;
+  color: #f3f6f7;
+  padding: 1rem 2rem;
+
+  border: 0.1rem solid #b5c7cf;
+  border-radius: 0.5rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.overlay-content button:hover {
+  background: #b5c7cf;
+  color: #182225;
+}

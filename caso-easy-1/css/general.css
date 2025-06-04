@@ -1,0 +1,32 @@
+/* 
+# Colors Palette:
+>> #182225
+>> #253439 (main color dark
+>> #49656F
+>> #B5C7CF (main color light)
+>> #CEDADF
+>> #F3F6F7 
+>> #A70F0F (accent color
+>> 
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #f3f6f7;
+}
