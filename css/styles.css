@@ -270,7 +270,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   padding: 2rem;
   border-right: 0.1rem solid #b5c7cf;
@@ -297,7 +296,7 @@
 
 .case-text {
   width: 100%;
-  height: 20%;
+  height: auto;
 
   display: flex;
   align-items: flex-start;
@@ -335,7 +334,7 @@
 
 .clues-container ul {
   width: 100%;
-  height: 60%;
+  height: auto;
 
   list-style-position: inside;
   padding-left: 2rem;
@@ -358,6 +357,11 @@
 .deduction-board-container {
   width: 50%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .board-container {
@@ -541,6 +545,7 @@ td:active {
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   height: 7rem;
 
   position: relative;
